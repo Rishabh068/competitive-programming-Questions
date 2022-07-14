@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+int t;
+cin>>t;
+while(t--){
+    int n;
+    cin>>n;
+    int counter=1;
+    int count=0;
+    vector<int>wholes;
+    while(n>0){
+        int x=n%10;
+        n=n/10;
+        if(x!=0){
+            x=x*counter;
+            wholes.push_back(x);
+            count++;
+        }
+        counter=counter*10;
+    }
+    cout<<count<<endl;
+    for(int i=0;i<wholes.size();i++)
+    cout<<wholes[i]<<" ";
+    cout<<endl;
+}
+ 	return 0;
+}
