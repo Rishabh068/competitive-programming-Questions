@@ -1,0 +1,38 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+int flag=0,count=0;
+long long int n;
+cin>>n;
+while(n>0){
+    int x=n%10;
+    if(x==7||x==4)
+    count++;
+    
+    n=n/10;
+    
+}
+int count2=count;
+
+
+while(count>0){
+    int y=count%10;
+    count=count/10;
+    if(y!=4&&y!=7){
+        flag=1;
+           break;
+        }
+        
+    }
+    if(count2==0){
+        cout<<"NO";
+    }
+    else if(flag==0){
+        cout<<"YES";
+    }
+    else
+    cout<<"NO";
+ 	return 0;
+}
