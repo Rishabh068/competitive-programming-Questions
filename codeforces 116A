@@ -1,0 +1,19 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+int t;
+cin>>t;
+int maxcapacity=0;
+int currcapacity=0;
+while(t--){
+    int x,y;
+    cin>>x>>y;
+   currcapacity=currcapacity-x+y;
+    if(currcapacity>maxcapacity)
+    maxcapacity=currcapacity;
+}
+cout<<maxcapacity;
+ 	return 0;
+}
