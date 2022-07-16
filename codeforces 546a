@@ -1,0 +1,16 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+int k,n,w,ans;
+cin>>k>>n>>w;
+int totalmoney=(w*(w+1))/2;
+totalmoney=totalmoney*k;
+if(totalmoney<n)
+ans=0;
+else
+ans=abs(totalmoney-n);
+cout<<ans;
+return 0;
+}
