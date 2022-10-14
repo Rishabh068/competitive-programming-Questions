@@ -1,0 +1,25 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+ 
+ string str;
+ string res="";
+ cin>>str;
+ int i=0;
+ while(i<str.length()){
+     if(str[i]=='A'||str[i]=='a'||str[i]=='E'||str[i]=='e'||str[i]=='I'||str[i]=='i'||str[i]=='O'||str[i]=='o'||str[i]=='U'||str[i]=='u'||str[i]=='Y'||str[i]=='y')
+     i++;
+     else{
+         res.push_back('.');
+         res.push_back(tolower(str[i]));
+         i++;
+     }
+ }
+ cout<<res;
+          
+    
+  
+ return 0;
+}
