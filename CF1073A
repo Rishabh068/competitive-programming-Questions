@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+#include <bits/stdc++.h>
+
+int main() {
+    int n;
+    cin>>n;
+    string s;
+    cin>>s;
+    int flag=0;
+    for(int i=1;i<s.length();i++){
+        if(s[i]!=s[i-1]){
+            cout<<"YES"<<endl;
+            cout<<s[i-1]<<s[i];
+            flag=1;
+            break;
+        }
+    }
+    if(flag==0){
+        cout<<"NO";
+    }
+	return 0;
+}
