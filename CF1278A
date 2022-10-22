@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+#include <bits/stdc++.h>
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+       string pass,hashed;
+       int flag=0;
+       cin>>pass;
+       cin>>hashed;
+       if(hashed.size()<pass.size()){
+           cout<<"NO"<<endl;
+           continue;
+       }
+       sort(pass.begin(),pass.end());
+       for(int i=0;i<=hashed.length()-pass.length();i++){
+           string sample=hashed.substr(i,pass.length());
+           sort(sample.begin(),sample.end());
+           if(pass==sample){
+           flag=1;
+           break;
+           }
+       }
+       if(flag)
+       cout<<"YES"<<endl;
+       else
+       cout<<"NO"<<endl;
+    }
+	return 0;
+}
